@@ -1,0 +1,2 @@
+GSL_LIBS   = -L/usr/local/lib -lgsl -lgslcblas -lm
+PKG_LIBS = $(GSL_LIBS)
