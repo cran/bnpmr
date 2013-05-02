@@ -268,7 +268,7 @@ void rMVN(double *res, double *aux, gsl_matrix *S, gsl_vector *mn, const double 
 }
 
 /* simulate from normal inverse gamma distribution */
-void rNIG(double a, double d, gsl_vector *mn, 
+void rNIG(const double a, const double d, gsl_vector *mn, 
            gsl_matrix *V, const gsl_rng * rngPntr, 
            double *res, double *aux, double *s2){
   int i=0,dim=0;

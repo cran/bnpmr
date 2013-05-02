@@ -15,8 +15,8 @@ Monotonic Regression
 \tabular{ll}{
 Package: \tab bnpmr\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2013-04-25\cr
+Version: \tab 1.1\cr
+Date: \tab 2013-05-02\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 }

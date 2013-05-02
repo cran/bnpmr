@@ -298,9 +298,9 @@ void ADD(double jl[], double jv[], double jh[], double jlProp[], double jvProp[]
   ILnew = getIntLik(y, Xprop, V, Vinv, m, tau, beta, resids, X2, V2, XtX, as, a, d, N);
   likRat = ILnew - *ILold;
   /* prior ratio */
-  priorRat = -log(*vU - *vL) + nldbeta (jlProp[r], *la, *lb)+ log(J) + log(*lambda) - log(J+1);
+  priorRat = -log(*vU - *vL) + nldbeta (jlProp[r], *la, *lb)+ log( (double) J) + log(*lambda) - log( (double) J+1);
   if(*alpha != 1){ /* not uniform distribution on simplex */
-    priorRat = priorRat - log(J) + gsl_sf_lngamma ((J+1)**alpha) + (*alpha-1)*log(jhProp[r]) + J*(*alpha-1)*log(1-jhProp[r]) - gsl_sf_lngamma (J**alpha) - gsl_sf_lngamma (*alpha);
+    priorRat = priorRat - log( (double) J) + gsl_sf_lngamma ((J+1)**alpha) + (*alpha-1)*log(jhProp[r]) + J*(*alpha-1)*log(1-jhProp[r]) - gsl_sf_lngamma (J**alpha) - gsl_sf_lngamma (*alpha);
   }
   /* proposal ratio and jacobian */  
   propRat = 0 + nldbeta (jhProp[r], *alpha, *alpha*J) - log(*vU - *vL); /* need normalized version of beta density here */
@@ -359,9 +359,9 @@ void REMOVE(double jl[], double jv[], double jh[], double jlProp[], double jvPro
   ILnew = getIntLik(y, Xprop, V, Vinv, m, tau, beta, resids, X2, V2, XtX, as, a, d, N);
   likRat = ILnew - *ILold;
   /* prior ratio */
-  priorRat = log(*vU - *vL) - nldbeta (jl[r], *la, *lb) - log(J-1) - log(*lambda) + log(J);
+  priorRat = log(*vU - *vL) - nldbeta (jl[r], *la, *lb) - log( (double) J-1) - log(*lambda) + log((double) J);
   if(*alpha != 1){ /* not uniform distribution on simplex */
-    priorRat = priorRat + log(J-1) + gsl_sf_lngamma(*alpha) + gsl_sf_lngamma((J-1)**alpha) - gsl_sf_lngamma(J**alpha) - (*alpha-1)*log(jh[r]) - (J-1)*(*alpha-1)*log(1-jh[r]);
+    priorRat = priorRat + log( (double) J-1) + gsl_sf_lngamma(*alpha) + gsl_sf_lngamma((J-1)**alpha) - gsl_sf_lngamma(J**alpha) - (*alpha-1)*log(jh[r]) - (J-1)*(*alpha-1)*log(1-jh[r]);
   }
   /* proposal ratio and jacobian */ 
   propRat = 0 + nldbeta (jh[r], *alpha, *alpha*J-*alpha) - log(*vU - *vL); /* need normalized version of beta density here */
