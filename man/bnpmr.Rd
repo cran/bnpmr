@@ -7,7 +7,8 @@
   Bayesian monotonic regression as described in Bornkamp and Ickstadt (2009).
 }
 \usage{
-bnpmr(y, x, prior = NULL, start = NULL, niter = 10000, pMoves = NULL, thin = 1, burnIn = 0, prop = NULL, seed = 1, size = 50)
+bnpmr(y, x, prior = NULL, start = NULL, niter = 10000, pMoves = NULL,
+      thin = 1, burnIn = 0, prop = NULL, seed = 1, size = 50)
 }
 \arguments{
   \item{y}{

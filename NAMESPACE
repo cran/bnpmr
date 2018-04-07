@@ -1,3 +1,3 @@
 export(bnpmr, pred.bnpmr, ptsp)
 
-useDynLib(bnpmr)
+useDynLib(bnpmr, .registration = TRUE)

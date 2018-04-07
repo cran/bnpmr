@@ -506,7 +506,7 @@ void MH(double jl[], double jv[], double jh[], int *sizetrans, int *dimtrans,
 	       &dimension, &p, &N, &vU, &vL, &la, &lb, &lambda, &alpha, &a, &d);
     }
 
-    if(!(i % *thin) & i>*burnIn){ 
+    if(!(i % *thin) & (i>*burnIn)){ 
       /* store realization */
       dimCount[count] = dimension;
       for(j=0;j<dimension;j++){

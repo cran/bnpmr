@@ -1,11 +1,12 @@
-f01de833e0b27d6f71d812cd5804afa2 *DESCRIPTION
-653dec9ce2c599ac5626abe32f5eea35 *NAMESPACE
+be8010d8ffef95f557ef98a536f68fd7 *DESCRIPTION
+80bf6ff6b9655c2d433106bf6d5e32d9 *NAMESPACE
 d2d45b388bbc1b6916d8613338569f24 *R/code.R
-9788c5035a85deae569b6f0bb9a3c5b0 *man/bnpmr-package.Rd
-7cacaedf00f22b85adf12ab309a1d1f6 *man/bnpmr.Rd
+763eeabd79f5b72e0ac0be638571c697 *man/bnpmr-package.Rd
+7d07d8fd007cdc8eccd46e02d71cc07e *man/bnpmr.Rd
 c83d48113920525895c8e02039daa323 *man/pred.bnpmr.Rd
 85eb0bc1749f80c375941c03f556c661 *man/ptsp.Rd
 5f64cb9d183ad5334cff27cd76df0db1 *src/Makevars
 eb0c597531fd60d722cc911ba0620405 *src/axl.cpp
 d633cb9a3a114420bcfcb727487c53a7 *src/axl.h
-46964329acaf24fcfc075cd0c569385b *src/npmr.cpp
+5962898aa4b09c4e60b94e4236f30cfc *src/bnpmr_init.c
+94087877f2734e1f2bd52fab9f8dafef *src/npmr.cpp
